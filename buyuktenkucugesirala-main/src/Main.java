@@ -1,17 +1,42 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        double a1, a2, a3;
+        System.out.println("Lutfen Siralamak Istediginiz Uc sayiyi giriniz.");
+        System.out.println("1: ");
+        Scanner inp1 = new Scanner(System.in);
+        a1 = inp1.nextDouble();
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("2: ");
+        Scanner inp2 = new Scanner(System.in);
+        a2 = inp2.nextDouble();
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        System.out.println("3: ");
+        Scanner inp3 = new Scanner(System.in);
+        a3 = inp1.nextDouble();
+
+        if(a1>a2 && a1>a3){
+            if(a2>a3){
+                System.out.println(a1+">"+a2+">"+a3);
+            }else{
+                System.out.println(a1+">"+a3+">"+a2);
+            }
         }
+        if(a2>a1 && a2>a3){
+            if(a1>a3){
+                System.out.println(a2+">"+a1+">"+a3);
+            }else{
+                System.out.println(a2+">"+a3+">"+a1);
+            }
+        }
+        if(a3>a1 && a3>a2){
+            if(a2>a1){
+                System.out.println(a3+">"+a2+">"+a1);
+            }else{
+                System.out.println(a3+">"+a1+">"+a2);
+            }
+        }
+
     }
 }
