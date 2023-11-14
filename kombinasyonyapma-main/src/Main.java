@@ -1,17 +1,35 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Kume Sayisini Giriniz: ");
+        Scanner inp1 = new Scanner(System.in);
+        int a = inp1.nextInt();
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("Alt Kumenin eleman sayisini giriniz: ");
+        Scanner inp2 = new Scanner(System.in);
+        int b = inp1.nextInt();
+        double faktoriyel1 = 1;
+        double faktoriyel2 = 1;
+        double faktoriyel3 = 1;
+        double sonuc, z;
+        z = a - b;
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        if (a > 0 && a>b) {
+            for (int i = 1; i <= a; i++) {
+                faktoriyel1 = faktoriyel1 * i;
+            }
+            for (int j = 1; j <= b; j++) {
+                faktoriyel2 = faktoriyel2 * j;
+            }
+            for (int k = 1; k <= z; k++) {
+                faktoriyel3 = faktoriyel3 * k;
+            }
+        }else{
+            System.out.println("Yanlis bir veri girdiniz.");
+        }
+            sonuc = faktoriyel1 / (faktoriyel2 * faktoriyel3);
+            System.out.println("Olusturulabilecek alt kume sayisi " + sonuc);
+
         }
     }
-}
