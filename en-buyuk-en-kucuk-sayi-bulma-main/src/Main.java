@@ -1,17 +1,35 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        Scanner scanner = new Scanner(System.in);
+        int i , N;
+        do {
+            System.out.print("Kaç sayı gireceksiniz: -> ");
+            N = scanner.nextInt();
+            if(N < 2) {
+                System.out.print("İki sayı karşılaştırmak için, en az iki sayı giriniz!\n");
+            }
+        } while (N < 2);
+        int[] dizi = new int[N];
+        for(i = 0; i<dizi.length;i++) {
+            System.out.print(i+1 +". Sayınızı giriniz: ");
+            dizi[i] = scanner.nextInt();
         }
+        int max = dizi[0];
+        for(int j = 0;j<dizi.length;j++) {
+            if(max < dizi[j]) {
+                max = dizi[j];
+            }
+        }
+        int min = dizi[0];
+        for(int k = 0;k<dizi.length;k++) {
+            if(dizi[0] > dizi[k]) {
+                min = dizi[k];
+            }
+        }
+        System.out.println("\nEn büyük sayınız: "+max);
+        System.out.println("En küçük sayınız: "+min);
+
     }
+
 }
