@@ -1,17 +1,35 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+/*Java'da "Employee" adında fabrika çalışanlarını temsil eden ve metotları ile çalışanların maaşlarını hesaplayan bir sınıf yazmalısınız. Bu sınıf 4 nitelik ve 5 metoda sahip olacaktır.
+
+Sınıfın Nitelikleri
+
+name : Çalışanın adı ve soyadı
+salary : Çalışanın maaşı
+workHours : Haftalık çalışma saati
+hireYear : İşe başlangıç yılı
+Sınıfın Metotları
+
+Employee(name,salary,workHours,hireYear) : Kurucu metot olup 4 parametre alacaktır.
+tax() : Maaşa uygulanan vergiyi hesaplayacaktır.
+Çalışanın maaşı 1000 TL'den az ise vergi uygulanmayacaktır.
+Çalışanın maaşı 1000 TL'den fazla ise maaşının %3'ü kadar vergi uygulanacaktır.
+bonus() : Eğer çalışan haftada 40 saatten fazla çalışmış ise fazladan çalıştığı her saat başına 30 TL olacak şekilde bonus ücretleri hesaplayacaktır.
+raiseSalary() : Çalışanın işe başlangıç yılına göre maaş artışını hesaplayacaktır. Şuan ki yılı 2021 olarak alın.
+Eğer çalışan 10 yıldan az bir süredir çalışıyorsa maaşına %5 zam yapılacaktır.
+Eğer çalışan 9 yıldan fazla ve 20 yıldan az çalışıyorsa maaşına %10 zam yapılacaktır.
+Eğer çalışan 19 yıldan fazla çalışıyorsa %15 zam yapılacaktır.
+toString() : Çalışana ait bilgileri ekrana bastıracaktır. */
+
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Employee Kemal = new Employee("Kemal", 2000, 45, 1985);
+        Employee Ahmet = new Employee("Ahmet", 950, 30, 2010);
+        Employee Mehmet = new Employee("Mehmet", 3000, 50, 1970);
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Kemal.employeeInfo();
+        Ahmet.employeeInfo();
+        Mehmet.employeeInfo();
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+
     }
 }
