@@ -1,17 +1,32 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        double armutKilo , elmaKilo , domatesKilo, patlicanKilo;
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        double armutfiyat = 2.14;
+        double elmafiyat = 3.67;
+        double domatesfiyat = 1.11;
+        double patlicanfiyat = 5.00;
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        double toplamFiyat ;
+
+        Scanner kg = new Scanner(System.in);
+
+        System.out.println("Armutun Kilosunu Giriniz :");
+        armutKilo = kg.nextInt();
+
+        System.out.println("Elmanın Kilosunu Giriniz :");
+        elmaKilo = kg.nextInt();
+
+        System.out.println("Domatesin Kilosunu Giriniz :");
+        domatesKilo = kg.nextInt();
+
+        System.out.println("Patlıcanın Kilosunu Giriniz :");
+        patlicanKilo = kg.nextInt();
+
+        toplamFiyat = (armutKilo * armutfiyat) + (elmaKilo * elmafiyat) + (domatesKilo * domatesfiyat) +
+                (patlicanfiyat * patlicanKilo) ;
+
+        System.out.println("Toplam Fiyat : " + toplamFiyat);
     }
 }
