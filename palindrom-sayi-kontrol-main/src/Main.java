@@ -1,17 +1,21 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+    static boolean isPalindrom (int a){
+        int givenNumber=a, reverseNumber=0;
+        while(givenNumber!=0){
+            reverseNumber = (givenNumber%10)+reverseNumber*10;
+            givenNumber/=10;
         }
+        if (reverseNumber==givenNumber)
+            return false;
+        else
+            return true;
+    }
+    public static void main(String[] args) {
+        System.out.println("Lutfen bir sayi giriniz: ");
+        Scanner inp = new Scanner(System.in);
+        int enteredNumber = inp.nextInt();
+        System.out.println(isPalindrom(enteredNumber));
+
     }
 }
