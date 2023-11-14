@@ -1,17 +1,28 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int A = 5, number = 0;
+        int[] list= {15,12,788,1,-1,-778,2,0};
+        Arrays.sort(list);
+        int closebig=number;
+        int closesmall=number;
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        for (int i: list){
+            if (i<number){
+                closebig=i;
+                break;
+            }
+            }
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        for (int i=list.length-1; i<=0; --i){
+            if (list[i]<number){
+                closesmall=list[i];
+            }
+        }
+        System.out.println("Dizi: "+ Arrays.toString(list));
+        System.out.println("Girilen Sayı : "+A);
+        System.out.println("Girilen sayıdan küçük en yakın sayı : "+ closesmall);
+        System.out.println("Girilen sayıdan büyük en yakın sayı : "+ closebig);
         }
     }
-}
