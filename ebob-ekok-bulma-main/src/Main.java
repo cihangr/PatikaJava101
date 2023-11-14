@@ -1,17 +1,32 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+import static java.lang.Math.sqrt;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        System.out.println("Lutfen EBOB ve EKOK degerlerini bulmak istediginiz sayilari giriniz: ");
+        System.out.println("a: ");
+        Scanner input = new Scanner(System.in);
+        int a = input.nextInt();
+        System.out.println("b: ");
+        int b = input.nextInt();
+        int ebob=1, ekok=1, i=1;
+        if (a>b) {
+            while (i>=a){
+                if (a % i == 0 && b%i==0) {
+                    ebob=i;
+                }
+                i++;
+            }
+        }else{
+            while (b>=i){
+                if (a % i == 0 && b%i==0) {
+                    ebob=i;
+                }
+                i++;
+            }
         }
+        System.out.println(ebob);
+        ekok=a*b/ebob;
+        System.out.println(ekok);
     }
 }
