@@ -1,17 +1,34 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Teacher A1 = new Teacher("Cihan", 555100100,"MAT");
+        Teacher A2 = new Teacher("Maria", 555100101,"FZK");
+        Teacher A3 = new Teacher("Danyal", 555100102,"KMY");
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Course MAT = new Course("Matematik",001,"MAT");
+        Course FIZIK = new Course("Fizik",002,"FZK");
+        Course KIMYA = new Course("Kimya",003,"KMY");
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        MAT.addTeacher(A1);
+        MAT.printTeacher();
+
+        FIZIK.addTeacher(A2);
+        FIZIK.printTeacher();
+
+        KIMYA.addTeacher(A3);
+        KIMYA.printTeacher();
+
+        Student mario = new Student("Mario", 99, 2, MAT,FIZIK,KIMYA);
+        Student luigi = new Student("Luigi", 100, 2, MAT,FIZIK,KIMYA);
+        Student princess = new Student("Princess", 101, 2, MAT,FIZIK,KIMYA);
+
+        mario.addBulkExamNote(100,90,85);
+        mario.addVerbalNote(90,90,90);
+        mario.calcAverage();
+        mario.isPass();
+        mario.printNote();
+
+
+
     }
 }
