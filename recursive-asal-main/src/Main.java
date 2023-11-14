@@ -1,17 +1,31 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    static boolean isPrime(int a, int i){
+        if (a==2){
+            return true;
+        }else{
+            if (i > 2) {
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+            if (a%i==0){
+                return false;
+            }else{
+                return isPrime(a,i-1);
+            }
+            }
+            return true;
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Sayı Giriniz :");
+        Scanner inp = new Scanner(System.in);
+        int a= inp.nextInt();
+        if (isPrime(a,a-1)){
+            System.out.println(a+" sayısı ASALDIR !");
+        }else{
+            System.out.println(a+" sayısı ASAL değildir !");
+        }
+
     }
 }
