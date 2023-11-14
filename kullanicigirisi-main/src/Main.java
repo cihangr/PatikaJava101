@@ -1,17 +1,46 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+//Eğer şifre yanlış ise kullanıcıya şifresini sıfırlayıp
+// sıfırlamayacağını sorun, eğer kullanıcı sıfırlamak isterse yeni girdiği
+// şifrenin hatalı girdiği ve unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip ,
+// şifreler aynı ise ekrana "Şifre oluşturulamadı, lütfen başka şifre giriniz."
+// sorun yoksa "Şifre oluşturuldu" yazan programı yazınız.
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        String userName, password, check, newpassword;
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.print("Lütfen Kullanıcı Adınızı ve Şifrenizi Giriniz: \n");
+        System.out.print("Adınız: \n");
+        Scanner entername = new Scanner(System.in);
+        userName = entername.nextLine();
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        System.out.print("Şifreniz: \n");
+        Scanner enterpassword = new Scanner(System.in);
+        password = enterpassword.nextLine();
+
+        if(userName.equals("Cihan123") && (password.equals("123123"))) {
+            System.out.print("Başarılı Giriş.");
+        } else {
+            System.out.print("Başarısız Giriş. \n");
+            System.out.print("Kullanıcı Şifrenizi değiştirmek ister misiniz?e-Evet,h-Hayır. \n");
+            Scanner ask = new Scanner(System.in);
+            check = ask.nextLine();
+            if (check.equals("e")){
+                System.out.print("Yeni Şifrenizi Giriniz: ");
+                Scanner newentry = new Scanner(System.in);
+                newpassword = newentry.nextLine();
+                if (newpassword.equals(password)){
+                    System.out.print("Şifre Oluşturulamadı!");
+                }else {
+                    System.out.print("Şifre Başarıyla Değiştirildi. \n");
+                }}
+                else {
+                    System.out.print("Şifrenizi Tekrar Giriniz: ");
+                }
+
+            }
+
+
         }
     }
-}
