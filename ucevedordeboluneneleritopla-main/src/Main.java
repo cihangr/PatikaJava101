@@ -1,17 +1,25 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+/*
+Java döngüler ile 0'dan girilen sayıya kadar olan sayılardan
+3 ve 4'e tam bölünen sayıların ortalamasını hesaplayan programı
+yazınız.
+ */
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Lutfen bir sayi giriniz: ");
+        Scanner inp = new Scanner(System.in);
+        int a = inp.nextInt();
+        int toplam=0;
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        for (int i=0; i<=a; i++){
+            if (i%3==0 && i%4==0){
+            }
+            toplam += i;
         }
+        System.out.println(toplam);
+
+
     }
 }
