@@ -1,17 +1,57 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
+package cinZodyagiHesaplama;
+import java.util.Scanner;
+public class cinZodyagiHesaplama {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int year, rest;
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Scanner input = new Scanner(System.in);
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        System.out.print("Lütfen Doğum yılınızı Girin. : ");
+
+        year = input.nextInt();
+        rest = year%12;
+
+        switch (rest){
+            case 0:
+                System.out.println("Çin Zodyağı Burcunuz : Maymun ");
+                break;
+            case 1:
+                System.out.println("Çin Zodyağı Burcunuz : Horoz");
+                break;
+            case 2:
+                System.out.println("Çin Zodyağı Burcunuz : Köpek");
+                break;
+            case 3:
+                System.out.println("Çin Zodyağı Burcunuz : Domuz");
+                break;
+            case 4:
+                System.out.println("Çin Zodyağı Burcunuz : Fare");
+                break;
+            case 5:
+                System.out.println("Çin Zodyağı Burcunuz : Öküz");
+                break;
+            case 6:
+                System.out.println("Çin Zodyağı Burcunuz : Kaplan");
+                break;
+            case 7:
+                System.out.println("Çin Zodyağı Burcunuz : Tavşan");
+                break;
+            case 8:
+                System.out.println("Çin Zodyağı Burcunuz : Ejderha");
+                break;
+            case 9:
+                System.out.println("Çin Zodyağı Burcunuz : Yılan");
+                break;
+            case 10:
+                System.out.println("Çin Zodyağı Burcunuz : At");
+                break;
+            case 11:
+                System.out.println("Çin Zodyağı Burcunuz : Koyun");
+                break;
+            default:
+                System.out.println("Yanlış Giriş yaptınız! Lütfen Tekrar deneyiniz.");
         }
+
+
     }
 }
